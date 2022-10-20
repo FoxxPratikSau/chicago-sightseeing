@@ -14,17 +14,45 @@ class _HomeState extends State<Home> {
       home: DefaultTabController(
         length: 3,
         child: Scaffold(
-            appBar: AppBar(
-              title: Text("Chicago"),
-              bottom: const TabBar(tabs: [
-                Tab(icon: Icon(Icons.holiday_village),text: 'Neighbourhood',),
-                Tab(icon: Icon(Icons.celebration),text: 'Events',),
-                Tab(icon: Icon(Icons.sports_baseball_rounded),text: 'Sports',),
-
-
-              ]),
-            
-        )),
+          appBar: AppBar(
+            backgroundColor: Colors.redAccent,
+            title: const Text("Chicago"),
+            bottom: const TabBar(
+                labelColor: Colors.redAccent,
+                unselectedLabelColor: Colors.white,
+                indicatorSize: TabBarIndicatorSize.label,
+                indicator: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(10),
+                        topRight: Radius.circular(10)),
+                    color: Colors.white),
+                tabs: [
+                  Tab(
+                    child: Align(
+                      alignment: Alignment.center,
+                      child: Text("Neighbourhood"),
+                    ),
+                  ),
+                  Tab(
+                    child: Align(
+                      alignment: Alignment.center,
+                      child: Text("Events"),
+                    ),
+                  ),
+                  Tab(
+                    child: Align(
+                      alignment: Alignment.center,
+                      child: Text("Sports"),
+                    ),
+                  ),
+                ]),
+          ),
+          body: const TabBarView(children: [
+            Text("1"),
+            Text("2"),
+            Text("3"),
+          ]),
+        ),
       ),
     );
   }
