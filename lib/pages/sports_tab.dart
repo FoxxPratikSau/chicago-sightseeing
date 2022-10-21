@@ -1,3 +1,4 @@
+import 'package:chicago_sightseeing/models/sports_model.dart';
 import 'package:chicago_sightseeing/widgets/customtile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -25,9 +26,9 @@ class _SportsTabState extends State<SportsTab> {
       body: ListView(
         padding: const EdgeInsets.all(8),
         children:  <Widget>[
-          customListTile(title1, logo1),
-          customListTile(title2, logo2),
-          customListTile(title3, logo3),
+          customListTile(title1,context, logo1),
+          customListTile(title2,context, logo2),
+          customListTile(title3,context, logo3),
           
         ],
       ),
