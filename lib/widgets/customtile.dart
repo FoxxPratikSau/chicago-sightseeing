@@ -1,18 +1,35 @@
+import 'package:chicago_sightseeing/SportsDetailPages/chicagoFire.dart';
+import 'package:chicago_sightseeing/SportsDetailPages/chicagoWhiteFox.dart';
+import 'package:chicago_sightseeing/models/sports_model.dart';
 import 'package:flutter/material.dart';
+
+import '../SportsDetailPages/chicagoBulls.dart';
 
 // import '../models/news_model.dart';
 // import '../pages/article_detail_page.dart';
 // import 'package:url_launcher/url_launcher.dart';
 
-Widget customListTile(String title, String logo) {
+Widget customListTile(String name, BuildContext context, String logo) {
   return InkWell(
     onTap: () {
-      // Navigator.push(
-      //     context,
-      //     MaterialPageRoute(
-      //         builder: (context) => ArticlePage(
-      //               article: article,
-      //             )));
+      if (name == "Chicago Bulls") {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => const SportsDetailsChicagoBulls()));
+      }
+      if (name == "Chicago White Fox") {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => const SportsDetailsChicagoWhiteFox()));
+      }
+      if (name == "Chicago Fire FC") {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => const SportsDetailsChicagoFire()));
+      }
     },
     child: Container(
       margin: const EdgeInsets.all(12.0),
@@ -34,8 +51,8 @@ Widget customListTile(String title, String logo) {
             height: 200.0,
             width: double.infinity,
             decoration: BoxDecoration(
-              image:
-                  DecorationImage(image: NetworkImage(logo), fit: BoxFit.contain),
+              image: DecorationImage(
+                  image: NetworkImage(logo.toString()), fit: BoxFit.contain),
               borderRadius: BorderRadius.circular(12.0),
             ),
           ),
@@ -59,7 +76,7 @@ Widget customListTile(String title, String logo) {
             height: 8.0,
           ),
           Text(
-            title,
+            name.toString(),
             style: const TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 16.0,
