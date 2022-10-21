@@ -1,3 +1,4 @@
+import 'package:chicago_sightseeing/pages/sports_tab.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -17,6 +18,7 @@ class _HomeState extends State<Home> {
           appBar: AppBar(
             backgroundColor: Colors.redAccent,
             title: const Text("Chicago"),
+            centerTitle: true,
             bottom: const TabBar(
                 labelColor: Colors.redAccent,
                 unselectedLabelColor: Colors.white,
@@ -50,7 +52,7 @@ class _HomeState extends State<Home> {
           body: const TabBarView(children: [
             Text("1"),
             Text("2"),
-            Text("3"),
+            SportsTab(),
           ]),
         ),
       ),
