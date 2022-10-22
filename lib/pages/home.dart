@@ -1,10 +1,8 @@
-import 'dart:convert';
 
-import 'package:chicago_sightseeing/models/sports_model.dart';
 import 'package:chicago_sightseeing/pages/events_tab.dart';
+import 'package:chicago_sightseeing/pages/neighbour.dart';
 import 'package:chicago_sightseeing/pages/sports_tab.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Home extends StatefulWidget {
@@ -61,7 +59,7 @@ class _HomeState extends State<Home> {
                 ]),
           ),
           body: const TabBarView(children: [
-            Text("1"),
+            NeighbourTab(),
             EventsTab(),
             SportsTab(),
           ]),

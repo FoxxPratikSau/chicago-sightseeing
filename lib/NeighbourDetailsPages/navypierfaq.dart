@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
+class NavyFaq extends StatelessWidget {
+  const NavyFaq({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class MyWidget extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(18.0),
               child: Text(
-                "The Bulls saw their greatest success during the 1990s when they played a major part in popularizing the NBA worldwide. They are known for having one of the NBA's greatest dynasties, winning six NBA championships between 1991 and 1998 with two three-peats. All six of their championship teams were led by Hall of Famers Michael Jordan, Scottie Pippen, and coach Phil Jackson. The Bulls are the only NBA franchise to win multiple championships while never losing an NBA Finals series in their history.",
+                "Navy Pier opened to the public on July 15, 1916. Originally known as the Municipal Pier, the pier was built by Charles Sumner Frost, a nationally known architect, with a design based on the 1909 Plan of Chicago by Daniel Burnham and Edward H. Bennett Its original purpose was to serve as a dock for freights, passenger traffic, and indoor and outdoor recreation; events like expositions and pageants were held there.",
                 style: TextStyle(
                     fontFamily: GoogleFonts.poppins().fontFamily, fontSize: 17, color: Colors.blueGrey, wordSpacing: 4),
               ),

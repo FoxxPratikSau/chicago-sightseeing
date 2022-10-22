@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
+class AdlerFaq extends StatelessWidget {
+  const AdlerFaq({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class MyWidget extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(18.0),
               child: Text(
-                "The Bulls saw their greatest success during the 1990s when they played a major part in popularizing the NBA worldwide. They are known for having one of the NBA's greatest dynasties, winning six NBA championships between 1991 and 1998 with two three-peats. All six of their championship teams were led by Hall of Famers Michael Jordan, Scottie Pippen, and coach Phil Jackson. The Bulls are the only NBA franchise to win multiple championships while never losing an NBA Finals series in their history.",
+                "The Adler Planetarium opened to the public on May 12, 1930. Its architect, Ernest A. Grunsfeld Jr., was awarded the gold medal of the Chicago chapter of the American Institute of Architects in 1931 for its design. It was declared a National Historic Landmark in 1987. The Adler has three theaters, space science exhibitions, including the Gemini 12 space capsule, and a collection of antique scientific instruments and print materials. In addition, the Adler hosts the Doane Observatory, a research-active public observatory.",
                 style: TextStyle(
                     fontFamily: GoogleFonts.poppins().fontFamily, fontSize: 17, color: Colors.blueGrey, wordSpacing: 4),
               ),

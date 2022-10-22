@@ -1,16 +1,10 @@
+import 'package:chicago_sightseeing/NeighbourDetailsPages/adlerfaq.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'cwhitefaq.dart';
+class Adler extends StatelessWidget {
+  const Adler({super.key});
 
-class SportsDetailsChicagoWhiteFox extends StatefulWidget {
-  const SportsDetailsChicagoWhiteFox({super.key});
-
-  @override
-  State<SportsDetailsChicagoWhiteFox> createState() => _SportsDetailsChicagoWhiteFoxState();
-}
-
-class _SportsDetailsChicagoWhiteFoxState extends State<SportsDetailsChicagoWhiteFox> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -25,7 +19,7 @@ class _SportsDetailsChicagoWhiteFoxState extends State<SportsDetailsChicagoWhite
           ),
           backgroundColor: Colors.redAccent,
           title: Text(
-            "Chicago Bulls",
+            "Adler Planeterium",
             style: TextStyle(fontFamily: GoogleFonts.poppins().fontFamily),
           ),
         ),
@@ -38,7 +32,7 @@ class _SportsDetailsChicagoWhiteFoxState extends State<SportsDetailsChicagoWhite
               decoration: BoxDecoration(
                 image: const DecorationImage(
                     image: NetworkImage(
-                        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Chicago_White_Sox.svg/108px-Chicago_White_Sox.svg.png"),
+                        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Adler_Planetarium_E.jpg/375px-Adler_Planetarium_E.jpg"),
                     fit: BoxFit.contain),
                 borderRadius: BorderRadius.circular(12.0),
               ),
@@ -48,7 +42,7 @@ class _SportsDetailsChicagoWhiteFoxState extends State<SportsDetailsChicagoWhite
             ),
             Container(
                 child: Text(
-              "Chicago White Sox",
+              "Adler Planetarium",
               style: TextStyle(
                   fontFamily: GoogleFonts.poppins().fontFamily,
                   fontSize: 30,
@@ -57,7 +51,7 @@ class _SportsDetailsChicagoWhiteFoxState extends State<SportsDetailsChicagoWhite
             Container(
               padding: const EdgeInsets.all(18.0),
               child: Text(
-                "The Chicago White Sox is an American professional baseball team based in Chicago. The White Sox competes in Major League Baseball (MLB) as a member club of the American League (AL) Central division. The team is owned by Jerry Reinsdorf and plays its home games at Guaranteed Rate Field, located on Chicago's South Side. The White Sox are one of two MLB teams based in Chicago, the other being the Chicago Cubs of the National League (NL) Central division.",
+                "The Adler Planetarium is a public museum dedicated to astronomy and astrophysics. It was founded in 1930 by Chicago businessman Max Adler. Located on the northeastern tip of Northerly Island on Lake Michigan in Chicago, Illinois, the Adler was the first planetarium in the United States and is part of Chicago's Museum Campus, which includes the John G. Shedd Aquarium and The Field Museum. The Adler's mission is to inspire exploration and understanding of the universe.",
                 style: TextStyle(
                   fontFamily: GoogleFonts.poppins().fontFamily,
                   fontSize: 17,
@@ -78,10 +72,8 @@ class _SportsDetailsChicagoWhiteFoxState extends State<SportsDetailsChicagoWhite
           // const SizedBox(width: 8.0,),
           FloatingActionButton(
             onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const ChicagoWhiteSoxFaq()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const AdlerFaq()));
             },
             backgroundColor: Colors.green,
             child: const Icon(Icons.more),
