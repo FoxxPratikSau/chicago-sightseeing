@@ -1,8 +1,6 @@
-import 'package:chicago_sightseeing/models/sports_model.dart';
+
 import 'package:chicago_sightseeing/widgets/customtile.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class SportsTab extends StatefulWidget {
   const SportsTab({super.key});

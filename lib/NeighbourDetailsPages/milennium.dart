@@ -1,16 +1,10 @@
+import 'package:chicago_sightseeing/NeighbourDetailsPages/milenniumfaq.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'cwhitefaq.dart';
+class MillenniumPark extends StatelessWidget {
+  const MillenniumPark({super.key});
 
-class SportsDetailsChicagoWhiteFox extends StatefulWidget {
-  const SportsDetailsChicagoWhiteFox({super.key});
-
-  @override
-  State<SportsDetailsChicagoWhiteFox> createState() => _SportsDetailsChicagoWhiteFoxState();
-}
-
-class _SportsDetailsChicagoWhiteFoxState extends State<SportsDetailsChicagoWhiteFox> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -25,7 +19,7 @@ class _SportsDetailsChicagoWhiteFoxState extends State<SportsDetailsChicagoWhite
           ),
           backgroundColor: Colors.redAccent,
           title: Text(
-            "Chicago Bulls",
+            "Millenium Park",
             style: TextStyle(fontFamily: GoogleFonts.poppins().fontFamily),
           ),
         ),
@@ -38,7 +32,7 @@ class _SportsDetailsChicagoWhiteFoxState extends State<SportsDetailsChicagoWhite
               decoration: BoxDecoration(
                 image: const DecorationImage(
                     image: NetworkImage(
-                        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Chicago_White_Sox.svg/108px-Chicago_White_Sox.svg.png"),
+                        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Millennium_Square%2C_Chicago%2C_Illinois_%289181701264%29.jpg/413px-Millennium_Square%2C_Chicago%2C_Illinois_%289181701264%29.jpg"),
                     fit: BoxFit.contain),
                 borderRadius: BorderRadius.circular(12.0),
               ),
@@ -48,7 +42,7 @@ class _SportsDetailsChicagoWhiteFoxState extends State<SportsDetailsChicagoWhite
             ),
             Container(
                 child: Text(
-              "Chicago White Sox",
+              "Millenium Park",
               style: TextStyle(
                   fontFamily: GoogleFonts.poppins().fontFamily,
                   fontSize: 30,
@@ -57,7 +51,7 @@ class _SportsDetailsChicagoWhiteFoxState extends State<SportsDetailsChicagoWhite
             Container(
               padding: const EdgeInsets.all(18.0),
               child: Text(
-                "The Chicago White Sox is an American professional baseball team based in Chicago. The White Sox competes in Major League Baseball (MLB) as a member club of the American League (AL) Central division. The team is owned by Jerry Reinsdorf and plays its home games at Guaranteed Rate Field, located on Chicago's South Side. The White Sox are one of two MLB teams based in Chicago, the other being the Chicago Cubs of the National League (NL) Central division.",
+                "Millennium Park is a public park located in the Loop community area of Chicago, operated by the Chicago Department of Cultural Affairs. The park, opened in 2004 and intended to celebrate the third millennium, is a prominent civic center near the city's Lake Michigan shoreline that covers a 24.5-acre (9.9 ha) section of northwestern Grant Park. Featuring a variety of public art, outdoor spaces and venues, the park is bounded by Michigan Avenue, Randolph Street, Columbus Drive and East Monroe Drive. In 2017, Millennium Park was the top tourist destination in Chicago and in the Midwest, and placed among the top ten in the United States with 25 million annual visitors.",
                 style: TextStyle(
                   fontFamily: GoogleFonts.poppins().fontFamily,
                   fontSize: 17,
@@ -78,10 +72,8 @@ class _SportsDetailsChicagoWhiteFoxState extends State<SportsDetailsChicagoWhite
           // const SizedBox(width: 8.0,),
           FloatingActionButton(
             onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const ChicagoWhiteSoxFaq()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const MillFaq()));
             },
             backgroundColor: Colors.green,
             child: const Icon(Icons.more),

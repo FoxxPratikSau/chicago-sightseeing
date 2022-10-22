@@ -2,9 +2,13 @@ import 'package:chicago_sightseeing/EventsDetailsPages/chicagoAirWater.dart';
 import 'package:chicago_sightseeing/EventsDetailsPages/chicagoBluesFestival.dart';
 import 'package:chicago_sightseeing/EventsDetailsPages/chicagoMarathon.dart';
 import 'package:chicago_sightseeing/EventsDetailsPages/chicagoTaste.dart';
+import 'package:chicago_sightseeing/NeighbourDetailsPages/adler.dart';
+import 'package:chicago_sightseeing/NeighbourDetailsPages/artinst.dart';
+import 'package:chicago_sightseeing/NeighbourDetailsPages/milennium.dart';
+import 'package:chicago_sightseeing/NeighbourDetailsPages/navypier.dart';
 import 'package:chicago_sightseeing/SportsDetailPages/chicagoFire.dart';
 import 'package:chicago_sightseeing/SportsDetailPages/chicagoWhiteFox.dart';
-import 'package:chicago_sightseeing/models/sports_model.dart';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -59,6 +63,22 @@ Widget customListTile(String name, BuildContext context, String logo) {
             MaterialPageRoute(
                 builder: (context) => const EventsDetailsBluesFestival()));
       }
+      if (name == "Millennium Park") {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const MillenniumPark()));
+      }
+      if (name == "Navy Pier") {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => const NavyPier()));
+      }
+      if (name == "Art Institute of Chicago") {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const ArtChicago()));
+      }
+      if (name == "Adler Planetarium") {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => const Adler()));
+      }
     },
     child: Column(
       children: [
@@ -83,7 +103,8 @@ Widget customListTile(String name, BuildContext context, String logo) {
                 width: 150.0,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: NetworkImage(logo.toString()), fit: BoxFit.contain),
+                      image: NetworkImage(logo.toString()),
+                      fit: BoxFit.contain),
                   borderRadius: BorderRadius.circular(12.0),
                 ),
               ),
@@ -111,10 +132,10 @@ Widget customListTile(String name, BuildContext context, String logo) {
               Flexible(
                 child: Text(
                   overflow: TextOverflow.ellipsis,
-                  maxLines:2,
-                  softWrap:true,
+                  maxLines: 2,
+                  softWrap: true,
                   name.toString(),
-                  style:  TextStyle(
+                  style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontFamily: GoogleFonts.poppins().fontFamily,
                     fontSize: 20.0,

@@ -1,16 +1,10 @@
+import 'package:chicago_sightseeing/NeighbourDetailsPages/navypierfaq.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'cwhitefaq.dart';
+class NavyPier extends StatelessWidget {
+  const NavyPier({super.key});
 
-class SportsDetailsChicagoWhiteFox extends StatefulWidget {
-  const SportsDetailsChicagoWhiteFox({super.key});
-
-  @override
-  State<SportsDetailsChicagoWhiteFox> createState() => _SportsDetailsChicagoWhiteFoxState();
-}
-
-class _SportsDetailsChicagoWhiteFoxState extends State<SportsDetailsChicagoWhiteFox> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -25,7 +19,7 @@ class _SportsDetailsChicagoWhiteFoxState extends State<SportsDetailsChicagoWhite
           ),
           backgroundColor: Colors.redAccent,
           title: Text(
-            "Chicago Bulls",
+            "Navy Pier",
             style: TextStyle(fontFamily: GoogleFonts.poppins().fontFamily),
           ),
         ),
@@ -38,7 +32,7 @@ class _SportsDetailsChicagoWhiteFoxState extends State<SportsDetailsChicagoWhite
               decoration: BoxDecoration(
                 image: const DecorationImage(
                     image: NetworkImage(
-                        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Chicago_White_Sox.svg/108px-Chicago_White_Sox.svg.png"),
+                        "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Navy_pier_current_logo.svg/1024px-Navy_pier_current_logo.svg.png"),
                     fit: BoxFit.contain),
                 borderRadius: BorderRadius.circular(12.0),
               ),
@@ -48,7 +42,7 @@ class _SportsDetailsChicagoWhiteFoxState extends State<SportsDetailsChicagoWhite
             ),
             Container(
                 child: Text(
-              "Chicago White Sox",
+              "Navy Pier",
               style: TextStyle(
                   fontFamily: GoogleFonts.poppins().fontFamily,
                   fontSize: 30,
@@ -57,7 +51,7 @@ class _SportsDetailsChicagoWhiteFoxState extends State<SportsDetailsChicagoWhite
             Container(
               padding: const EdgeInsets.all(18.0),
               child: Text(
-                "The Chicago White Sox is an American professional baseball team based in Chicago. The White Sox competes in Major League Baseball (MLB) as a member club of the American League (AL) Central division. The team is owned by Jerry Reinsdorf and plays its home games at Guaranteed Rate Field, located on Chicago's South Side. The White Sox are one of two MLB teams based in Chicago, the other being the Chicago Cubs of the National League (NL) Central division.",
+                "Navy Pier is a 3,300-foot-long (1,010 m) pier on the shoreline of Lake Michigan, located in the Streeterville neighborhood of the Near North Side community area in Chicago, Illinois, United States. Navy Pier encompasses over 50 acres (20 ha) of parks, gardens, shops, restaurants, family attractions and exhibition facilities and is one of the top destinations in the Midwestern United States, drawing over nine million visitors annually. It is one of the most visited attractions in the entire Midwest and is Chicago's second-most visited tourist attraction.",
                 style: TextStyle(
                   fontFamily: GoogleFonts.poppins().fontFamily,
                   fontSize: 17,
@@ -78,10 +72,8 @@ class _SportsDetailsChicagoWhiteFoxState extends State<SportsDetailsChicagoWhite
           // const SizedBox(width: 8.0,),
           FloatingActionButton(
             onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const ChicagoWhiteSoxFaq()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const NavyFaq()));
             },
             backgroundColor: Colors.green,
             child: const Icon(Icons.more),
