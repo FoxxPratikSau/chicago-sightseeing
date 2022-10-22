@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:chicago_sightseeing/models/sports_model.dart';
+import 'package:chicago_sightseeing/pages/events_tab.dart';
 import 'package:chicago_sightseeing/pages/sports_tab.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -55,7 +56,7 @@ class _HomeState extends State<Home> {
           ),
           body: const TabBarView(children: [
             Text("1"),
-            Text("2"),
+            EventsTab(),
             SportsTab(),
           ]),
         ),
