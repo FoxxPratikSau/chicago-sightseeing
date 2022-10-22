@@ -1,3 +1,7 @@
+import 'package:chicago_sightseeing/EventsDetailsPages/chicagoAirWater.dart';
+import 'package:chicago_sightseeing/EventsDetailsPages/chicagoBluesFestival.dart';
+import 'package:chicago_sightseeing/EventsDetailsPages/chicagoMarathon.dart';
+import 'package:chicago_sightseeing/EventsDetailsPages/chicagoTaste.dart';
 import 'package:chicago_sightseeing/SportsDetailPages/chicagoFire.dart';
 import 'package:chicago_sightseeing/SportsDetailPages/chicagoWhiteFox.dart';
 import 'package:chicago_sightseeing/models/sports_model.dart';
@@ -29,6 +33,30 @@ Widget customListTile(String name, BuildContext context, String logo) {
             context,
             MaterialPageRoute(
                 builder: (context) => const SportsDetailsChicagoFire()));
+      }
+      if (name == "Chicago Air and Water Show") {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => const EventsDetailsAirWater()));
+      }
+      if (name == "Chicago Marathon") {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => const EventsDetailsMarathon()));
+      }
+      if (name == "Taste of Chicago") {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => const EventsDetailsTaste()));
+      }
+      if (name == "Chicago Blues Festival") {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => const EventsDetailsBluesFestival()));
       }
     },
     child: Container(
