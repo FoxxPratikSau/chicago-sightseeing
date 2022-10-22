@@ -24,6 +24,7 @@ class _SportsTabState extends State<SportsTab> {
     String title3="Chicago Fire FC";
     return Scaffold(
       body: ListView(
+        shrinkWrap: true,
         padding: const EdgeInsets.all(8),
         children:  <Widget>[
           customListTile(title1,context, logo1),

@@ -6,6 +6,7 @@ import 'package:chicago_sightseeing/SportsDetailPages/chicagoFire.dart';
 import 'package:chicago_sightseeing/SportsDetailPages/chicagoWhiteFox.dart';
 import 'package:chicago_sightseeing/models/sports_model.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../SportsDetailPages/chicagoBulls.dart';
 
@@ -59,59 +60,71 @@ Widget customListTile(String name, BuildContext context, String logo) {
                 builder: (context) => const EventsDetailsBluesFestival()));
       }
     },
-    child: Container(
-      margin: const EdgeInsets.all(12.0),
-      padding: const EdgeInsets.all(8.0),
-      decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(12.0),
-          boxShadow: const [
-            BoxShadow(
-              color: Colors.black,
-              blurRadius: 3.0,
-            ),
-          ]),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            height: 200.0,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: NetworkImage(logo.toString()), fit: BoxFit.contain),
+    child: Column(
+      children: [
+        Container(
+          margin: const EdgeInsets.all(12.0),
+          padding: const EdgeInsets.all(8.0),
+          decoration: BoxDecoration(
+              color: Colors.white,
               borderRadius: BorderRadius.circular(12.0),
-            ),
+              boxShadow: const [
+                BoxShadow(
+                  color: Colors.black,
+                  blurRadius: 3.0,
+                ),
+              ]),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                height: 200.0,
+                width: 150.0,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: NetworkImage(logo.toString()), fit: BoxFit.contain),
+                  borderRadius: BorderRadius.circular(12.0),
+                ),
+              ),
+              const SizedBox(
+                height: 8.0,
+                width: 8.0,
+              ),
+              // Container(
+              //   padding: const EdgeInsets.all(6.0),
+              //   decoration: BoxDecoration(
+              //     color: Colors.blue,
+              //     borderRadius: BorderRadius.circular(30.0),
+              //   ),
+              //   child: Text(
+              //     title,
+              //     style: const TextStyle(
+              //       color: Colors.white,
+              //     ),
+              //   ),
+              // ),
+              const SizedBox(
+                height: 18.0,
+                width: 18.0,
+              ),
+              Flexible(
+                child: Text(
+                  overflow: TextOverflow.ellipsis,
+                  maxLines:2,
+                  softWrap:true,
+                  name.toString(),
+                  style:  TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontFamily: GoogleFonts.poppins().fontFamily,
+                    fontSize: 20.0,
+                  ),
+                ),
+              )
+            ],
           ),
-          const SizedBox(
-            height: 8.0,
-          ),
-          // Container(
-          //   padding: const EdgeInsets.all(6.0),
-          //   decoration: BoxDecoration(
-          //     color: Colors.blue,
-          //     borderRadius: BorderRadius.circular(30.0),
-          //   ),
-          //   child: Text(
-          //     title,
-          //     style: const TextStyle(
-          //       color: Colors.white,
-          //     ),
-          //   ),
-          // ),
-          const SizedBox(
-            height: 8.0,
-          ),
-          Text(
-            name.toString(),
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 16.0,
-            ),
-          )
-        ],
-      ),
+        ),
+      ],
     ),
   );
 }
