@@ -27,6 +27,7 @@ class _EventsTabState extends State<EventsTab> {
     String title4 = "Chicago Blues Festival";
     return Scaffold(
       body: ListView(
+        shrinkWrap: true,
         children: <Widget>[
           customListTile(title1, context, logo1),
           customListTile(title2, context, logo2),
