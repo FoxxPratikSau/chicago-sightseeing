@@ -95,17 +95,17 @@ Widget customListTile(String name, BuildContext context, String logo) {
                 ),
               ]),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                height: 200.0,
-                width: 150.0,
+                height: 100.0,
+                width: 200.0,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                       image: NetworkImage(logo.toString()),
                       fit: BoxFit.contain),
-                  borderRadius: BorderRadius.circular(12.0),
+                  shape: BoxShape.circle,
                 ),
               ),
               const SizedBox(
