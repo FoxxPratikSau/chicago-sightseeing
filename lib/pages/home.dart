@@ -1,4 +1,3 @@
-
 import 'package:chicago_sightseeing/pages/events_tab.dart';
 import 'package:chicago_sightseeing/pages/neighbour.dart';
 import 'package:chicago_sightseeing/pages/sports_tab.dart';
@@ -20,40 +19,58 @@ class _HomeState extends State<Home> {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
+            elevation: 10,
             backgroundColor: Colors.redAccent,
-            title:  Text("Chicago",style: TextStyle(fontFamily: GoogleFonts.poppins().fontFamily,fontWeight: FontWeight.bold),),
-            shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.vertical(
-              bottom: Radius.circular(20),
+            title: Text(
+              "Chicago",
+              style: TextStyle(
+                  fontFamily: GoogleFonts.poppins().fontFamily,
+                  fontWeight: FontWeight.bold),
             ),
-          ),
+            shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20.0),
+                topRight: Radius.circular(20.0),
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20),
+              ),
+            ),
             centerTitle: true,
-            bottom:  TabBar(
+            bottom: TabBar(
                 labelColor: Colors.redAccent,
                 unselectedLabelColor: Colors.white,
                 indicatorSize: TabBarIndicatorSize.label,
                 indicator: const BoxDecoration(
                     borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(10),
-                        topRight: Radius.circular(10)),
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(20),
+                      bottomLeft: Radius.circular(20),
+                      bottomRight: Radius.circular(20),
+                    ),
                     color: Colors.white),
                 tabs: [
                   Tab(
                     child: Align(
                       alignment: Alignment.center,
-                      child: Text("Neighbourhood",style: TextStyle(fontFamily: GoogleFonts.poppins().fontFamily)),
+                      child: Text("Neighbour-\nhood",
+                          style: TextStyle(
+                              fontFamily: GoogleFonts.poppins().fontFamily)),
                     ),
                   ),
                   Tab(
                     child: Align(
                       alignment: Alignment.center,
-                      child: Text("Events",style: TextStyle(fontFamily: GoogleFonts.poppins().fontFamily)),
+                      child: Text("Events",
+                          style: TextStyle(
+                              fontFamily: GoogleFonts.poppins().fontFamily)),
                     ),
                   ),
                   Tab(
                     child: Align(
                       alignment: Alignment.center,
-                      child: Text("Sports",style: TextStyle(fontFamily: GoogleFonts.poppins().fontFamily)),
+                      child: Text("Sports",
+                          style: TextStyle(
+                              fontFamily: GoogleFonts.poppins().fontFamily)),
                     ),
                   ),
                 ]),
