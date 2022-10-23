@@ -9,6 +9,7 @@ class ArtChicago extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        resizeToAvoidBottomInset: true,
         appBar: AppBar(
           toolbarHeight: 60,
           shadowColor: null,
@@ -23,7 +24,8 @@ class ArtChicago extends StatelessWidget {
             style: TextStyle(fontFamily: GoogleFonts.poppins().fontFamily),
           ),
         ),
-        body: Column(
+        body: SingleChildScrollView(
+            child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
@@ -59,7 +61,7 @@ class ArtChicago extends StatelessWidget {
               ),
             ),
           ],
-        ),
+        )),
         floatingActionButton:
             Row(mainAxisAlignment: MainAxisAlignment.end, children: [
           // FloatingActionButton(

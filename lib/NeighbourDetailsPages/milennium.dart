@@ -23,7 +23,8 @@ class MillenniumPark extends StatelessWidget {
             style: TextStyle(fontFamily: GoogleFonts.poppins().fontFamily),
           ),
         ),
-        body: Column(
+        body: SingleChildScrollView(
+            child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
@@ -59,7 +60,7 @@ class MillenniumPark extends StatelessWidget {
               ),
             ),
           ],
-        ),
+        )),
         floatingActionButton:
             Row(mainAxisAlignment: MainAxisAlignment.end, children: [
           // FloatingActionButton(
