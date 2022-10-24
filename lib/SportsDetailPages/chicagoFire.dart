@@ -19,7 +19,7 @@ class SportsDetailsChicagoFire extends StatelessWidget {
           ),
           backgroundColor: Colors.redAccent,
           title: Text(
-            "Chicago Bulls",
+            "Chicago Fire FC",
             style: TextStyle(fontFamily: GoogleFonts.poppins().fontFamily),
           ),
         ),
@@ -32,7 +32,7 @@ class SportsDetailsChicagoFire extends StatelessWidget {
               decoration: BoxDecoration(
                 image: const DecorationImage(
                     image: NetworkImage(
-                        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Chicago_White_Sox.svg/108px-Chicago_White_Sox.svg.png"),
+                        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/CHI_Logo-2021.svg/285px-CHI_Logo-2021.svg.png"),
                     fit: BoxFit.contain),
                 borderRadius: BorderRadius.circular(12.0),
               ),
